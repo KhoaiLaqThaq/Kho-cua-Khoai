@@ -1,0 +1,13 @@
+button { 
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 2px;
+ }
+
+ button.btn-login {
+     background-color: green;
+ }
+
+ button.btn-logout {
+     background-color: red;
+ }
