@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LazyLoad from 'react-lazyload';
 
 import './index.css';
 import * as serviceWorker from './serviceWorker';
@@ -49,7 +50,11 @@ const routing = (
                 <Route exact path="/login" component={LoginComponent} />
                 <Route exact path="/animation" component={CSSTransitionGroupComponent} />
                 <Route exact path="/themeSwitcher" component={ThemeSwitcherComponent} />
-                <Route exact path="/datatable" component={DataTableItemsComponent} />
+                <Route exact path="/datatable" component={() => (
+                    <LazyLoad>
+                        <DataTableItemsComponent/>
+                    </LazyLoad>
+                )} />
                 <Route component={NotFound}/>
             </Switch>
         </div>
