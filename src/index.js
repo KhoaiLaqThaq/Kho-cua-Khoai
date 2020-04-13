@@ -15,6 +15,7 @@ import NotFound from './app/+components/common/err/notfound';
 import CSSTransitionGroupComponent from './app/+components/animation/csstransitiongroup';
 import ThemeSwitcherComponent from './app/+components/theme/themeSwitcher';
 import DataTableItemsComponent from './app/+components/common/data-table/datatable-items';
+import HooksComponent from './app/+components/hooks/EffectHooks';
 
 
 const routing = (
@@ -40,6 +41,9 @@ const routing = (
                     <Link to="/datatable">Items</Link>
                 </li>
                 <li>
+                    <Link to="/hooks">Hooks</Link>
+                </li>
+                <li>
                     <Link to="/login">Login</Link>
                 </li>
             </ul>
@@ -55,6 +59,7 @@ const routing = (
                         <DataTableItemsComponent/>
                     </LazyLoad>
                 )} />
+                <Route exact path="/hooks" component={HooksComponent}/>
                 <Route component={NotFound}/>
             </Switch>
         </div>

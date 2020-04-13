@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
 
-function CountApp() {
-    const [count, setCount] = useState(0);
+const FuncHooks = () => {
+    //Declare multiple state variables!
+    const [fruit, setFruit] = useState('banana');
+    const [age, setAge] = useState(23);
 
     return (
-        <div>
-            <p>You clicked {count} times</p>
-            <button onClick={() => setCount(count + 1)}>Click me</button>
-        </div>
+        <React.Fragment>
+            <p>Your age is {age}, like fruit {fruit}</p>
+            <button 
+                onClick={() => {
+                    setAge(age + 1)
+                    setFruit('Strawberry')
+                }}
+            >
+                Click me!
+            </button>
+        </React.Fragment>
     )
 }
 
-export default CountApp;
+export default FuncHooks;

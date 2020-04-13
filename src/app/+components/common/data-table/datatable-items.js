@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTable } from 'react-table';
-import { lazyload } from 'react-lazyload';
 
 const data = [
     { name: 'Ayaan', age: 26}, 
