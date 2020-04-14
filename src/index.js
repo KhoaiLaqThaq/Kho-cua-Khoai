@@ -16,6 +16,7 @@ import CSSTransitionGroupComponent from './app/+components/animation/csstransiti
 import ThemeSwitcherComponent from './app/+components/theme/themeSwitcher';
 import DataTableItemsComponent from './app/+components/common/data-table/datatable-items';
 import HooksComponent from './app/+components/hooks/EffectHooks';
+import GameComponent from './app/+components/common/gameXO/TicTac';
 
 
 const routing = (
@@ -44,6 +45,9 @@ const routing = (
                     <Link to="/hooks">Hooks</Link>
                 </li>
                 <li>
+                    <Link to="/game">Game XO</Link>
+                </li>
+                <li>
                     <Link to="/login">Login</Link>
                 </li>
             </ul>
@@ -60,6 +64,7 @@ const routing = (
                     </LazyLoad>
                 )} />
                 <Route exact path="/hooks" component={HooksComponent}/>
+                <Route path="/game" component={GameComponent} />
                 <Route component={NotFound}/>
             </Switch>
         </div>

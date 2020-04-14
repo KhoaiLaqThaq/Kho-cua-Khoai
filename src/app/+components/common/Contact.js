@@ -8,7 +8,6 @@ const Contacts = ({ match }) => <p>{match.params.id}</p>
 export default class ContactComponent extends React.Component {
     render() {
 
-        const { url } = this.props.match;
         return (
             <div className="contact-container">
                 <h2>Contact: (+84) 36 645 1025</h2>
